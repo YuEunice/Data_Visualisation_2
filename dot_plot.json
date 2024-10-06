@@ -7,7 +7,7 @@
       "fontSize": 14
     },
     "data": {
-      "url": "https://raw.githubusercontent.com/YuEunice/3179/main/data/Age_group_deaths_data.csv",
+      "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Age_group_deaths_data.csv",
       "format": {
         "type": "csv"
       }
