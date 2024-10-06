@@ -1,17 +1,65 @@
-States,Medically certified(Total),Medically certified(Male),Medically certified(Female),Non-medically certified(Total),Non-medically certified(Male),Non-medically certified(Female)
-Johor,16673,10093,6580,8632,4525,4107
-Kedah,10965,6434,4531,6663,3358,3305
-Kelantan,8496,4923,3573,4949,2488,2461
-Melaka,3844,2258,1586,2786,1411,1375
-Negeri Sembilan,6015,3624,2391,2621,1335,1286
-Pahang,6960,4237,2723,4062,2217,1845
-Perak,12931,7641,5290,9950,5000,4950
-Perlis,1595,959,636,827,416,411
-Pulau Pinang,7761,4799,2962,5159,2539,2620
-Sabah,8303,4998,3305,9092,5086,4006
-Sarawak,7756,4640,3116,8871,4926,3945
-Selangor,21980,13257,8633,10971,5766,5205
-Terengganu,6282,3587,2695,2404,1175,1229
-W.P. Kuala Lumpur,6823,4034,2789,3139,1672,1467
-W.P. Labuan,284,155,129,108,63,45
-W.P. Putrajaya,230,126,104,23,13,10
+State,Category,Gender,Deaths
+Johor,Medically certified,Male,10093
+Johor,Medically certified,Female,6580
+Johor,Non-medically certified,Male,4525
+Johor,Non-medically certified,Female,4107
+Kedah,Medically certified,Male,6434
+Kedah,Medically certified,Female,4531
+Kedah,Non-medically certified,Male,3358
+Kedah,Non-medically certified,Female,3305
+Kelantan,Medically certified,Male,4923
+Kelantan,Medically certified,Female,3573
+Kelantan,Non-medically certified,Male,2488
+Kelantan,Non-medically certified,Female,2461
+Melaka,Medically certified,Male,2258
+Melaka,Medically certified,Female,1586
+Melaka,Non-medically certified,Male,1411
+Melaka,Non-medically certified,Female,1375
+Negeri Sembilan,Medically certified,Male,3624
+Negeri Sembilan,Medically certified,Female,2391
+Negeri Sembilan,Non-medically certified,Male,1335
+Negeri Sembilan,Non-medically certified,Female,1286
+Pahang,Medically certified,Male,4237
+Pahang,Medically certified,Female,2723
+Pahang,Non-medically certified,Male,2217
+Pahang,Non-medically certified,Female,1845
+Perak,Medically certified,Male,7641
+Perak,Medically certified,Female,5290
+Perak,Non-medically certified,Male,5000
+Perak,Non-medically certified,Female,4950
+Perlis,Medically certified,Male,959
+Perlis,Medically certified,Female,636
+Perlis,Non-medically certified,Male,416
+Perlis,Non-medically certified,Female,411
+Pulau Pinang,Medically certified,Male,4799
+Pulau Pinang,Medically certified,Female,2962
+Pulau Pinang,Non-medically certified,Male,2539
+Pulau Pinang,Non-medically certified,Female,2620
+Sabah,Medically certified,Male,4998
+Sabah,Medically certified,Female,3305
+Sabah,Non-medically certified,Male,5086
+Sabah,Non-medically certified,Female,4006
+Sarawak,Medically certified,Male,4640
+Sarawak,Medically certified,Female,3116
+Sarawak,Non-medically certified,Male,4926
+Sarawak,Non-medically certified,Female,3945
+Selangor,Medically certified,Male,13257
+Selangor,Medically certified,Female,8633
+Selangor,Non-medically certified,Male,5766
+Selangor,Non-medically certified,Female,5205
+Terengganu,Medically certified,Male,3587
+Terengganu,Medically certified,Female,2695
+Terengganu,Non-medically certified,Male,1175
+Terengganu,Non-medically certified,Female,1229
+W.P. Kuala Lumpur,Medically certified,Male,4034
+W.P. Kuala Lumpur,Medically certified,Female,2789
+W.P. Kuala Lumpur,Non-medically certified,Male,1672
+W.P. Kuala Lumpur,Non-medically certified,Female,1467
+W.P. Labuan,Medically certified,Male,155
+W.P. Labuan,Medically certified,Female,129
+W.P. Labuan,Non-medically certified,Male,63
+W.P. Labuan,Non-medically certified,Female,45
+W.P. Putrajaya,Medically certified,Male,126
+W.P. Putrajaya,Medically certified,Female,104
+W.P. Putrajaya,Non-medically certified,Male,13
+W.P. Putrajaya,Non-medically certified,Female,10
