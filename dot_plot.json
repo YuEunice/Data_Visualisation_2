@@ -1,0 +1,90 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A ranged dot plot for Male and Female Deaths by Age Group with a legend",
+    "title": {
+      "text": "Deaths by Age Group in Malaysia (2022)",
+      "anchor": "middle",
+      "fontSize": 14
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/YuEunice/3179/main/data/Age_group_deaths_data.csv",
+      "format": {
+        "type": "csv"
+      }
+    },
+    "transform": [
+      {
+        "fold": ["Deaths(Male)", "Deaths(Female)"],
+        "as": ["Gender", "Deaths"]
+      },
+      {
+        "calculate": "datum.Gender == 'Deaths(Male)' ? 'Male' : 'Female'",
+        "as": "GenderLabel"
+      }
+    ],
+    "layer": [
+      {
+        "mark": "line",  
+        "encoding": {
+          "y": {
+            "field": "Age group",
+            "type": "nominal",
+            "axis": {
+              "title": "Age Group"
+            }
+          },
+          "x": {
+            "field": "Deaths",
+            "type": "quantitative",
+            "title": "Number of Deaths"
+          },
+          "detail": {
+            "field": "Age group"  
+          },
+          "color": {
+            "value": "gray"  
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "point",
+          "filled": true
+        },
+        "encoding": {
+          "y": {
+            "field": "Age group",
+            "type": "nominal"
+          },
+          "x": {
+            "field": "Deaths",
+            "type": "quantitative"
+          },
+          "color": {
+            "field": "GenderLabel",  
+            "type": "nominal",
+            "scale": {
+              "range": ["#F291CF", "#59A2DE"]
+            },
+            "legend": {
+              "title": "Gender"  
+            }
+          },
+          "size": {"value": 80},
+          "tooltip": [
+            {"field": "Age group", "type": "nominal", "title": "Age Group"},
+            {"field": "GenderLabel", "type": "nominal", "title": "Gender"},
+            {"field": "Deaths", "type": "quantitative", "title": "Total Deaths"}
+          ]
+        }
+      }
+    ],
+    "width": 300,
+    "height": 330,
+    "config": {
+      "axis": {
+        "grid": true
+      }
+    }
+  }
+  
