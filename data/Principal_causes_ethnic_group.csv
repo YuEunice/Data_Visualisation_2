@@ -77,24 +77,24 @@ Others,Non-medically certified,"Breast cancer",10
 Others,Non-medically certified,"Colon, rectum and anus cancer",9
 Others,Non-medically certified,"Trachea, bronchus and lung cancer",8
 Others,Non-medically certified,"Liver cancer",7
-Non-citizen,Medically certified,"Ischaemic heart diseases",304,14.7
-Non-citizen,Medically certified,"COVID-19 infection",264,12.8
-Non-citizen,Medically certified,"Pneumonia",261,12.6
-Non-citizen,Medically certified,"Cerebrovascular diseases",149,7.2
-Non-citizen,Medically certified,"Transport accidents",46,2.2
-Non-citizen,Medically certified,"Malignant neoplasm of trachea, bronchus and lung",43,2.1
-Non-citizen,Medically certified,"Hypertensive diseases",42,2.0
-Non-citizen,Medically certified,"Diabetes mellitus",35,1.7
-Non-citizen,Medically certified,"Chronic lower respiratory diseases",33,1.6
-Non-citizen,Medically certified,"Respiratory tuberculosis",31,1.5
-Non-citizen,Non-medically certified,"Old age 65 years and over",771,47.5
-Non-citizen,Non-medically certified,"Hypertension",113,7.0
-Non-citizen,Non-medically certified,"Cerebrovascular diseases",58,3.6
-Non-citizen,Non-medically certified,"Diabetes mellitus",33,2.0
-Non-citizen,Non-medically certified,"Ischaemic heart diseases",21,1.3
-Non-citizen,Non-medically certified,"Trachea, bronchus and lung cancer",18,1.1
-Non-citizen,Non-medically certified,"Colon, rectum and anus cancer",13,0.8
-Non-citizen,Non-medically certified,"Asthma",12,0.7
-Non-citizen,Non-medically certified,"Liver cancer",12,0.7
-Non-citizen,Non-medically certified,"Breast cancer",9,0.6
+Non-citizen,Medically certified,"Ischaemic heart diseases",304
+Non-citizen,Medically certified,"COVID-19 infection",264
+Non-citizen,Medically certified,"Pneumonia",261
+Non-citizen,Medically certified,"Cerebrovascular diseases",149
+Non-citizen,Medically certified,"Transport accidents",46
+Non-citizen,Medically certified,"Malignant neoplasm of trachea, bronchus and lung",43
+Non-citizen,Medically certified,"Hypertensive diseases",42
+Non-citizen,Medically certified,"Diabetes mellitus",35
+Non-citizen,Medically certified,"Chronic lower respiratory diseases",33
+Non-citizen,Medically certified,"Respiratory tuberculosis",31
+Non-citizen,Non-medically certified,"Old age 65 years and over",771
+Non-citizen,Non-medically certified,"Hypertension",113
+Non-citizen,Non-medically certified,"Cerebrovascular diseases",58
+Non-citizen,Non-medically certified,"Diabetes mellitus",33
+Non-citizen,Non-medically certified,"Ischaemic heart diseases",21
+Non-citizen,Non-medically certified,"Trachea, bronchus and lung cancer",18
+Non-citizen,Non-medically certified,"Colon, rectum and anus cancer",13
+Non-citizen,Non-medically certified,"Asthma",12
+Non-citizen,Non-medically certified,"Liver cancer",12
+Non-citizen,Non-medically certified,"Breast cancer",9
 
