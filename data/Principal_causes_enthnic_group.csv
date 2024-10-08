@@ -1,0 +1,100 @@
+Ethnic Group,Category,Causes,Number of Causes
+Malay,Medically certified,"Ischaemic heart diseases",12127
+Malay,Medically certified,"Pneumonia",9435
+Malay,Medically certified,"Cerebrovascular diseases",5507
+Malay,Medically certified,"COVID-19 infection",2879
+Malay,Medically certified,"Transport accidents",2606
+Malay,Medically certified,"Diabetes mellitus",1425
+Malay,Medically certified,"Chronic lower respiratory diseases",1398
+Malay,Medically certified,"Malignant neoplasm of trachea, bronchus and lung",1110
+Malay,Medically certified,"Malignant neoplasm of breast",1050
+Malay,Medically certified,"Hypertensive diseases",1013
+Malay,Non-medically certified,"Old age 65 years and over",18721
+Malay,Non-medically certified,"Hypertension",2154
+Malay,Non-medically certified,"Diabetes mellitus",1793
+Malay,Non-medically certified,"Cerebrovascular diseases",1277
+Malay,Non-medically certified,"Asthma",686
+Malay,Non-medically certified,"Colon, rectum and anus cancer",435
+Malay,Non-medically certified,"Breast cancer",380
+Malay,Non-medically certified,"Trachea, bronchus and lung cancer",372
+Malay,Non-medically certified,"Liver cancer",321
+Chinese,Medically certified,"Ischaemic heart diseases",4513
+Chinese,Medically certified,"Pneumonia",4266
+Chinese,Medically certified,"Cerebrovascular diseases",2061
+Chinese,Medically certified,"COVID-19 infection",1436
+Chinese,Medically certified,"Malignant neoplasm of trachea, bronchus and lung",1070
+Chinese,Medically certified,"Malignant neoplasm of colon, rectum and anus",735
+Chinese,Medically certified,"Malignant neoplasm of liver and intrahepatic bile ducts",579
+Chinese,Medically certified,"Malignant neoplasm of breast",529
+Chinese,Medically certified,"Transport accidents",519
+Chinese,Medically certified,"Hypertensive diseases",518
+Chinese,Non-medically certified,"Old age 65 years and over",12040
+Chinese,Non-medically certified,"Hypertension",1018
+Chinese,Non-medically certified,"Cerebrovascular diseases",447
+Chinese,Non-medically certified,"Trachea, bronchus and lung cancer",438
+Chinese,Non-medically certified,"Cerebrovascular diseases",386
+Chinese,Non-medically certified,"Diabetes mellitus",379
+Chinese,Non-medically certified,"Liver cancer",295
+Chinese,Non-medically certified,"Breast cancer",202
+Chinese,Non-medically certified,"Ischaemic heart diseases",182
+Chinese,Medically certified,"Pancreas cancer",132
+Indians,Medically certified,"Ischaemic heart diseases",2482
+Indians,Medically certified,"Pneumonia",1444
+Indians,Medically certified,"Cerebrovascular diseases",665
+Indians,Medically certified,"Transport accidents",485
+Indians,Medically certified,"COVID-19 infection",368
+Indians,Medically certified,"Diseases of the liver",344
+Indians,Medically certified,"Diabetes mellitus",210
+Indians,Medically certified,"Malignant neoplasm of breast",159
+Indians,Medically certified,"Chronic lower respiratory diseases",146
+Indians,Medically certified,"Hypertensive diseases",133
+Indians,Non-medically certified,"Old age 65 years and over",2249
+Indians,Non-medically certified,"Hypertension",424
+Indians,Non-medically certified,"Diabetes mellitus",348
+Indians,Non-medically certified,"Cerebrovascular diseases",180
+Indians,Non-medically certified,"Ischaemic heart diseases",85
+Indians,Non-medically certified,"Breast cancer",63
+Indians,Non-medically certified,"Colon, rectum and anus cancer",57
+Indians,Non-medically certified,"Trachea, bronchus and lung cancer",46
+Indians,Non-medically certified,"Liver cancer",41
+Indians,Non-medically certified,"Liver disease",39
+Others,Medically certified,"Ischaemic heart diseases",168
+Others,Medically certified,"Pneumonia",157
+Others,Medically certified,"Transport accidents",60
+Others,Medically certified,"Cerebrovascular diseases",56
+Others,Medically certified,"COVID-19 infection",48
+Others,Medically certified,"Chronic lower respiratory diseases",25
+Others,Medically certified,"Diabetes mellitus",22
+Others,Medically certified,"Hypertensive diseases",21
+Others,Medically certified,"Malignant neoplasm of trachea, bronchus and lung",16
+Others,Non-medically certified,"Old age 65 years and over",290
+Others,Non-medically certified,"Hypertension",30
+Others,Non-medically certified,"Diabetes mellitus",24
+Others,Non-medically certified,"Cerebrovascular diseases",23
+Others,Non-medically certified,"Asthma",13
+Others,Non-medically certified,"Ischaemic heart diseases",10
+Others,Non-medically certified,"Breast cancer",10
+Others,Non-medically certified,"Colon, rectum and anus cancer",9
+Others,Non-medically certified,"Trachea, bronchus and lung cancer",8
+Others,Non-medically certified,"Liver cancer",7
+Non-citizen,Medically certified,"Ischaemic heart diseases",304,14.7
+Non-citizen,Medically certified,"COVID-19 infection",264,12.8
+Non-citizen,Medically certified,"Pneumonia",261,12.6
+Non-citizen,Medically certified,"Cerebrovascular diseases",149,7.2
+Non-citizen,Medically certified,"Transport accidents",46,2.2
+Non-citizen,Medically certified,"Malignant neoplasm of trachea, bronchus and lung",43,2.1
+Non-citizen,Medically certified,"Hypertensive diseases",42,2.0
+Non-citizen,Medically certified,"Diabetes mellitus",35,1.7
+Non-citizen,Medically certified,"Chronic lower respiratory diseases",33,1.6
+Non-citizen,Medically certified,"Respiratory tuberculosis",31,1.5
+Non-citizen,Non-medically certified,"Old age 65 years and over",771,47.5
+Non-citizen,Non-medically certified,"Hypertension",113,7.0
+Non-citizen,Non-medically certified,"Cerebrovascular diseases",58,3.6
+Non-citizen,Non-medically certified,"Diabetes mellitus",33,2.0
+Non-citizen,Non-medically certified,"Ischaemic heart diseases",21,1.3
+Non-citizen,Non-medically certified,"Trachea, bronchus and lung cancer",18,1.1
+Non-citizen,Non-medically certified,"Colon, rectum and anus cancer",13,0.8
+Non-citizen,Non-medically certified,"Asthma",12,0.7
+Non-citizen,Non-medically certified,"Liver cancer",12,0.7
+Non-citizen,Non-medically certified,"Breast cancer",9,0.6
+
