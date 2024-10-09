@@ -13,7 +13,7 @@ Year,Category,Cause,Number of Cases
 2000,Non-Medically,"Hypertension",1214
 2000,Non-Medically,"Diabetes mellitus",1076
 2000,Non-Medically,"Cerebrovascular diseases",997
-2000mNon-Medically,"Ischaemic heart diseases",1018
+2000,Non-Medically,"Ischaemic heart diseases",1018
 2001,Medically,"Ischaemic heart diseases",5207
 2001,Medically,"Cerebrovascular diseases",3651
 2001,Medically,"Septicaemia",3171
