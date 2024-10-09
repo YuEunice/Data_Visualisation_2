@@ -1,0 +1,349 @@
+Year,Category,Cause,Number of Cases
+2000,Medically,"Ischaemic heart diseases",4564
+2000,Medically,"Cerebrovascular diseases",3237
+2000,Medically,"Transport accidents",2908
+2000,Medically,"Septicaemia",2741
+2000,Medically,"Pneumonia",1822
+2000,Medically,"Malignant neoplasm of trachea, bronchus and lung",833
+2000,Medically,"Chronic lower respiratory diseases",1270
+2000,Non-Medically,"Old age 65 years and over",26559
+2000,Non-Medically,"Asthma",3593
+2000,Non-Medically,"Fever",2101
+2000,Non-Medically,"Transport accidents-air,land and water",1366
+2000,Non-Medically,"Hypertension",1214
+2000,Non-Medically,"Diabetes mellitus",1076
+2000,Non-Medically,"Cerebrovascular diseases",997
+2000mNon-Medically,"Ischaemic heart diseases",1018
+2001,Medically,"Ischaemic heart diseases",5207
+2001,Medically,"Cerebrovascular diseases",3651
+2001,Medically,"Septicaemia",3171
+2001,Medically,"Transport accidents",3093
+2001,Medically,"Pneumonia",2374
+2001,Medically,"Malignant neoplasm of trachea, bronchus and lung",1012
+2001,Medically,"Chronic lower respiratory diseases",1413
+2001,Non-Medically,"Old age 65 years and over",26969
+2001,Non-Medically,"Asthma",3295
+2001,Non-Medically,"Fever",2219
+2001,Non-Medically,"Diabetes mellitus",1160
+2001,Non-Medically,"Hypertension",1084
+2001,Non-Medically,"Transport accidents-air,land and water",1051
+2001,Non-Medically,"Cerebrovascular diseases",804
+2001,Non-Medically,"Ischaemic heart diseases",745
+2002,Medically,"Ischaemic heart diseases",5774
+2002,Medically,"Cerebrovascular diseases",3295
+2002,Medically,"Septicaemia",3553
+2002,Medically,"Transport accidents",3265
+2002,Medically,"Pneumonia",2539
+2002,Medically,"Malignant neoplasm of trachea, bronchus and lung",1151
+2002,Medically,"Chronic lower respiratory diseases",1514
+2002,Non-Medically,"Old age 65 years and over",29258
+2002,Non-Medically,"Asthma",3347
+2002,Non-Medically,"Fever",2052
+2002,Non-Medically,"Diabetes mellitus",1236
+2002,Non-Medically,"Hypertension",1100
+2002,Non-Medically,"Transport accidents-air,land and water",961
+2002,Non-Medically,"Cerebrovascular diseases",898
+2002,Non-Medically,"Ischaemic heart diseases",1065
+2003,Medically,"Ischaemic heart diseases",5957
+2003,Medically,"Septicaemia",4377
+2003,Medically,"Cerebrovascular diseases",3974
+2003,Medically,"Transport accidents",3603
+2003,Medically,"Pneumonia",2718
+2003,Medically,"Malignant neoplasm of trachea, bronchus and lung",1125
+2003,Medically,"Chronic lower respiratory diseases",1452
+2003,Non-Medically,"Old age 65 years and over",30952
+2003,Non-Medically,"Asthma",3338
+2003,Non-Medically,"Fever",1790
+2003,Non-Medically,"Diabetes mellitus",1374
+2003,Non-Medically,"Hypertension",1147
+2003,Non-Medically,"Transport accidents-air,land and water",862
+2003,Non-Medically,"Cerebrovascular diseases",1022
+2003,Non-Medically,"Ischaemic heart diseases",855
+2004,Medically,"Ischaemic heart diseases",6267
+2004,Medically,"Septicaemia",4478
+2004,Medically,"Cerebrovascular diseases",4030
+2004,Medically,"Transport accidents",3165
+2004,Medically,"Pneumonia",2966
+2004,Medically,"Malignant neoplasm of trachea, bronchus and lung",1203
+2004,Medically,"Chronic lower respiratory diseases",1418
+2004,Non-Medically,"Old age 65 years and over",30649
+2004,Non-Medically,"Asthma",3440
+2004,Non-Medically,"Fever",1476
+2004,Non-Medically,"Diabetes mellitus",1311
+2004,Non-Medically,"Hypertension",1132
+2004,Non-Medically,"Transport accidents-air,land and water",682
+2004,Non-Medically,"Cerebrovascular diseases",1001
+2004,Non-Medically,"Ischaemic heart diseases",876
+2005,Medically,"Ischaemic heart diseases",7074
+2005,Medically,"Septicaemia",4044
+2005,Medically,"Cerebrovascular diseases",4286
+2005,Medically,"Transport accidents",3721
+2005,Medically,"Pneumonia",3297
+2005,Medically,"Malignant neoplasm of trachea, bronchus and lung",1303
+2005,Medically,"Chronic lower respiratory diseases",1343
+2005,Non-Medically,"Old age 65 years and over",31789
+2005,Non-Medically,"Asthma",3678
+2005,Non-Medically,"Fever",1261
+2005,Non-Medically,"Diabetes mellitus",1603
+2005,Non-Medically,"Hypertension",1252
+2005,Non-Medically,"Transport accidents-air,land and water",604
+2005,Non-Medically,"Cerebrovascular diseases",1162
+2005,Non-Medically,"Ischaemic heart diseases",734
+2006,Medically,"Ischaemic heart diseases",7836
+2006,Medically,"Septicaemia",4053
+2006,Medically,"Cerebrovascular diseases",4285
+2006,Medically,"Transport accidents",3908
+2006,Medically,"Pneumonia",3602
+2006,Medically,"Malignant neoplasm of trachea, bronchus and lung",1375
+2006,Medically,"Chronic lower respiratory diseases",1370
+2006,Non-Medically,"Old age 65 years and over",31465
+2006,Non-Medically,"Asthma",3688
+2006,Non-Medically,"Fever",1136
+2006,Non-Medically,"Diabetes mellitus",1759
+2006,Non-Medically,"Hypertension",1306
+2006,Non-Medically,"Cerebrovascular diseases",1192
+2006,Non-Medically,"Transport accidents-air,land and water",496
+2006,Non-Medically,"Ischaemic heart diseases",803
+2007,Medically,"Ischaemic heart diseases",8776
+2007,Medically,"Septicaemia",3975
+2007,Medically,"Cerebrovascular diseases",4465
+2007,Medically,"Transport accidents",3990
+2007,Medically,"Pneumonia",4249
+2007,Medically,"Malignant neoplasm of trachea, bronchus and lung",1430
+2007,Medically,"Chronic lower respiratory diseases",1430
+2007,Non-Medically,"Old age 65 years and over",31871
+2007,Non-Medically,"Asthma",3594
+2007,Non-Medically,"Fever",988
+2007,Non-Medically,"Cerebrovascular diseases",1209
+2007,Non-Medically,"Diabetes mellitus",1633
+2007,Non-Medically,"Hypertension",1319
+2007,Non-Medically,"Transport accidents-air,land and water",480
+2007,Non-Medically,"Ischaemic heart diseases",779
+2008,Medically,"Ischaemic heart diseases",9435
+2008,Medically,"Septicaemia",3735
+2008,Medically,"Cerebrovascular diseases",4637
+2008,Medically,"Transport accidents",4290
+2008,Medically,"Pneumonia",5254
+2008,Medically,"Malignant neoplasm of trachea, bronchus and lung",1589
+2008,Medically,"Chronic lower respiratory diseases",1484
+2008,Non-Medically,"Old age 65 years and over",33545
+2008,Non-Medically,"Asthma",3671
+2008,Non-Medically,"Fever",947
+2008,Non-Medically,"Cerebrovascular diseases",1309
+2008,Non-Medically,"Diabetes mellitus",1614
+2008,Non-Medically,"Hypertension",1411
+2008,Non-Medically,"Transport accidents-air,land and water",345
+2008,Non-Medically,"Ischaemic heart diseases",791
+2009,Medically,"Ischaemic heart diseases",9361
+2009,Medically,"Septicaemia",4217
+2009,Medically,"Cerebrovascular diseases",4511
+2009,Medically,"Transport accidents",4585
+2009,Medically,"Pneumonia",6106
+2009,Medically,"Malignant neoplasm of trachea, bronchus and lung",1518
+2009,Medically,"Chronic lower respiratory diseases",1304
+2009,Non-Medically,"Old age 65 years and over",34851
+2009,Non-Medically,"Asthma",3538
+2009,Non-Medically,"Fever",801
+2009,Non-Medically,"Cerebrovascular diseases",1308
+2009,Non-Medically,"Diabetes mellitus",1809
+2009,Non-Medically,"Hypertension",1264
+2009,Non-Medically,"Transport accidents-air,land and water",364
+2009,Non-Medically,"Ischaemic heart diseases",757
+2010,Medically,"Ischaemic heart diseases",9371
+2010,Medically,"Septicaemia",4526
+2010,Medically,"Cerebrovascular diseases",4763
+2010,Medically,"Transport accidents",4583
+2010,Medically,"Pneumonia",6504
+2010,Medically,"Malignant neoplasm of trachea, bronchus and lung",1555
+2010,Medically,"Chronic lower respiratory diseases",1306
+2010,Non-Medically,"Old age 65 years and over",34130
+2010,Non-Medically,"Asthma",3188
+2010,Non-Medically,"Fever",640
+2010,Non-Medically,"Cerebrovascular diseases",1281
+2010,Non-Medically,"Diabetes mellitus",1738
+2010,Non-Medically,"Hypertension",1407
+2010,Non-Medically,"Transport accidents-air,land and water",268
+2010,Non-Medically,"Ischaemic heart diseases",579
+2011,Medically,"Ischaemic heart diseases",10004
+2011,Medically,"Septicaemia",4540
+2011,Medically,"Cerebrovascular diseases",5112
+2011,Medically,"Transport accidents",4502
+2011,Medically,"Pneumonia",7518
+2011,Medically,"Malignant neoplasm of trachea, bronchus and lung",1607
+2011,Medically,"Chronic lower respiratory diseases",1231
+2011,Non-Medically,"Old age 65 years and over",35840
+2011,Non-Medically,"Asthma",2999
+2011,Non-Medically,"Fever",581
+2011,Non-Medically,"Cerebrovascular diseases",1319
+2011,Non-Medically,"Diabetes mellitus",1709
+2011,Non-Medically,"Hypertension",1439
+2011,Non-Medically,"Transport accidents-air,land and water",278
+2011,Non-Medically,"Ischaemic heart diseases",709
+2012,Medically,"Ischaemic heart diseases",10091
+2012,Medically,"Septicaemia",4698
+2012,Medically,"Cerebrovascular diseases",5220
+2012,Medically,"Transport accidents",4566
+2012,Medically,"Pneumonia",8031
+2012,Medically,"Malignant neoplasm of trachea, bronchus and lung",1704
+2012,Medically,"Chronic lower respiratory diseases",1162
+2012,Non-Medically,"Old age 65 years and over",37353
+2012,Non-Medically,"Asthma",2970
+2012,Non-Medically,"Fever",564
+2012,Non-Medically,"Cerebrovascular diseases",1595
+2012,Non-Medically,"Diabetes mellitus",1865
+2012,Non-Medically,"Hypertension",1502
+2012,Non-Medically,"Transport accidents-air,land and water",322
+2012,Non-Medically,"Ischaemic heart diseases",902
+2013,Medically,"Ischaemic heart diseases",10169
+2013,Medically,"Septicaemia",4611
+2013,Medically,"Cerebrovascular diseases",5156
+2013,Medically,"Transport accidents",4538
+2013,Medically,"Pneumonia",9142
+2013,Medically,"Malignant neoplasm of trachea, bronchus and lung",1816
+2013,Medically,"Chronic lower respiratory diseases",1215
+2013,Non-Medically,"Old age 65 years and over",37068
+2013,Non-Medically,"Asthma",2823
+2013,Non-Medically,"Fever",504
+2013,Non-Medically,"Cerebrovascular diseases",1721
+2013,Non-Medically,"Diabetes mellitus",1869
+2013,Non-Medically,"Hypertension",1603
+2013,Non-Medically,"Transport accidents-air,land and water",430
+2013,Non-Medically,"Ischaemic heart diseases",1006
+2014,Medically,"Ischaemic heart diseases",10432
+2014,Medically,"Septicaemia",4698
+2014,Medically,"Cerebrovascular diseases",5474
+2014,Medically,"Transport accidents",4304
+2014,Medically,"Pneumonia",9250
+2014,Medically,"Malignant neoplasm of trachea, bronchus and lung",1741
+2014,Medically,"Chronic lower respiratory diseases",1219
+2014,Non-Medically,"Old age 65 years and over",38065
+2014,Non-Medically,"Asthma",1728
+2014,Non-Medically,"Fever",397
+2014,Non-Medically,"Cerebrovascular diseases",1804
+2014,Non-Medically,"Diabetes mellitus",2161
+2014,Non-Medically,"Hypertension",1755
+2014,Non-Medically,"Transport accidents-air,land and water",310
+2014,Non-Medically,"Ischaemic heart diseases",1046
+2015,Medically,"Ischaemic heart diseases",11018
+2015,Medically,"Septicaemia",3407
+2015,Medically,"Cerebrovascular diseases",5678
+2015,Medically,"Transport accidents",4196
+2015,Medically,"Pneumonia",10200
+2015,Medically,"Malignant neoplasm of trachea, bronchus and lung",1809
+2015,Medically,"Chronic lower respiratory diseases",1306
+2015,Non-Medically,"Old age 65 years and over",37869
+2015,Non-Medically,"Asthma",1677
+2015,Non-Medically,"Fever",469
+2015,Non-Medically,"Cerebrovascular diseases",1891
+2015,Non-Medically,"Diabetes mellitus",2233
+2015,Non-Medically,"Hypertension",2009
+2015,Non-Medically,"Transport accidents-air,land and water",347
+2015,Non-Medically,"Ischaemic heart diseases",1367
+2016,Medically,"Ischaemic heart diseases",11310
+2016,Medically,"Septicaemia",3582
+2016,Medically,"Cerebrovascular diseases",5876
+2016,Medically,"Transport accidents",4640
+2016,Medically,"Pneumonia",10678
+2016,Medically,"Malignant neoplasm of trachea, bronchus and lung",1850
+2016,Medically,"Chronic lower respiratory diseases",1583
+2016,Non-Medically,"Old age 65 years and over",38452
+2016,Non-Medically,"Asthma",1635
+2016,Non-Medically,"Fever",401
+2016,Non-Medically,"Cerebrovascular diseases",2018
+2016,Non-Medically,"Diabetes mellitus",2286
+2016,Non-Medically,"Hypertension",2090
+2016,Non-Medically,"Transport accidents-air,land and water",299
+2016,Non-Medically,"Ischaemic heart diseases",1459
+2017,Medically,"Ischaemic heart diseases",13503
+2017,Medically,"Septicaemia",3648
+2017,Medically,"Cerebrovascular diseases",6878
+2017,Medically,"Transport accidents",4499
+2017,Medically,"Pneumonia",12365
+2017,Medically,"Malignant neoplasm of trachea, bronchus and lung",2251
+2017,Medically,"Chronic lower respiratory diseases",1927
+2017,Non-Medically,"Old age 65 years and over",35057
+2017,Non-Medically,"Asthma",1328
+2017,Non-Medically,"Fever",324
+2017,Non-Medically,"Cerebrovascular diseases",1871
+2017,Non-Medically,"Diabetes mellitus",2243
+2017,Non-Medically,"Hypertension",2187
+2017,Non-Medically,"Transport accidents-air,land and water",257
+2017,Non-Medically,"Ischaemic heart diseases",1217
+2018,Medically,"Ischaemic heart diseases",18267
+2018,Medically,"Septicaemia",4073
+2018,Medically,"Cerebrovascular diseases",9154
+2018,Medically,"Transport accidents",4391
+2018,Medically,"Pneumonia",13804
+2018,Medically,"Malignant neoplasm of trachea, bronchus and lung",2805
+2018,Medically,"Chronic lower respiratory diseases",3074
+2018,Non-Medically,"Old age 65 years and over",25549
+2018,Non-Medically,"Asthma",1043
+2018,Non-Medically,"Fever",175
+2018,Non-Medically,"Cerebrovascular diseases",1483
+2018,Non-Medically,"Diabetes mellitus",1889
+2018,Non-Medically,"Hypertension",2131
+2018,Non-Medically,"Transport accidents-air,land and water",111
+2018,Non-Medically,"Ischaemic heart diseases",921
+2019,Medically,"Ischaemic heart diseases",16336
+2019,Medically,"Septicaemia",4173
+2019,Medically,"Cerebrovascular diseases",8699
+2019,Medically,"Transport accidents",4201
+2019,Medically,"Pneumonia",13384
+2019,Medically,"Malignant neoplasm of trachea, bronchus and lung",2606
+2019,Medically,"Chronic lower respiratory diseases",2314
+2019,Non-Medically,"Old age 65 years and over",30729
+2019,Non-Medically,"Asthma",1079
+2019,Non-Medically,"Fever",130
+2019,Non-Medically,"Cerebrovascular diseases",1715
+2019,Non-Medically,"Diabetes mellitus",1999
+2019,Non-Medically,"Hypertension",2397
+2019,Non-Medically,"Transport accidents-air,land and water",132
+2019,Non-Medically,"Ischaemic heart diseases",1031
+2020,Medically,"Ischaemic heart diseases",18526
+2020,Medically,"Septicaemia",3989
+2020,Medically,"Cerebrovascular diseases",9105
+2020,Medically,"Transport accidents",3169
+2020,Medically,"Pneumonia",12424
+2020,Medically,"Malignant neoplasm of trachea, bronchus and lung",2742
+2020,Medically,"Chronic lower respiratory diseases",2265
+2020,Medically,"COVID-19 infection",405
+2020,Non-Medically,"Old age 65 years and over",26108
+2020,Non-Medically,"Asthma",588
+2020,Non-Medically,"Fever",52
+2020,Non-Medically,"Cerebrovascular diseases",1368
+2020,Non-Medically,"Diabetes mellitus",1756
+2020,Non-Medically,"Hypertension",2196
+2020,Non-Medically,"Ischaemic heart diseases",740
+2020,Non-Medically,"Transport accidents-air,land and water",85
+2021,Medically,"COVID-19 infection",31063
+2021,Medically,"Septicaemia",4908
+2021,Medically,"Ischaemic heart diseases",21485
+2021,Medically,"Cerebrovascular diseases",10181
+2021,Medically,"Transport accidents",3062
+2021,Medically,"Pneumonia",17503
+2021,Medically,"Malignant neoplasm of trachea, bronchus and lung",2679
+2021,Medically,"Chronic lower respiratory diseases",2337
+2021,Non-Medically,"Old age 65 years and over",29910
+2021,Non-Medically,"Asthma",689
+2021,Non-Medically,"Fever",30
+2021,Non-Medically,"Cerebrovascular diseases",1581
+2021,Non-Medically,"Diabetes mellitus",2126
+2021,Non-Medically,"Hypertension",3309
+2021,Non-Medically,"Ischaemic heart diseases",812
+2021,Non-Medically,"Transport accidents-air,land and water",78
+2022,Medically,"COVID-19 infection",5314
+2022,Medically,"Septicaemia",5006
+2022,Medically,"Ischaemic heart diseases",20322
+2022,Medically,"Cerebrovascular diseases",9149
+2022,Medically,"Transport accidents",4012
+2022,Medically,"Pneumonia",16770
+2022,Medically,"Malignant neoplasm of trachea, bronchus and lung",2644
+2022,Medically,"Chronic lower respiratory diseases",2324
+2022,Non-Medically,"Old age 65 years and over",35679
+2022,Non-Medically,"Asthma",909
+2022,Non-Medically,"Fever",41
+2022,Non-Medically,"Cerebrovascular diseases",2109
+2022,Non-Medically,"Diabetes mellitus",2619
+2022,Non-Medically,"Hypertension",3911
+2022,Non-Medically,"Ischaemic heart diseases",1024
+2022,Non-Medically,"Transport accidents-air,land and water",100
