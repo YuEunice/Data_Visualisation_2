@@ -1,90 +1,115 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A ranged dot plot for Male and Female Deaths by Age Group with a legend",
-    "title": {
-      "text": "Deaths by Age Group in Malaysia (2022)",
-      "anchor": "middle",
-      "fontSize": 14
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A ranged dot plot for Male and Female Deaths by Age Group with a legend",
+  "background": "transparent", 
+  "title": {
+    "text": "Deaths by Age Group in Malaysia (2022)",
+    "anchor": "middle",
+    "fontSize": 20,
+    "font": "Serif"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Age_group_deaths_data.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "fold": ["Deaths(Male)", "Deaths(Female)", "Deaths"],
+      "as": ["Gender", "Deaths"]
     },
-    "data": {
-      "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Age_group_deaths_data.csv",
-      "format": {
-        "type": "csv"
-      }
-    },
-    "transform": [
-      {
-        "fold": ["Deaths(Male)", "Deaths(Female)"],
-        "as": ["Gender", "Deaths"]
-      },
-      {
-        "calculate": "datum.Gender == 'Deaths(Male)' ? 'Male' : 'Female'",
-        "as": "GenderLabel"
-      }
-    ],
-    "layer": [
-      {
-        "mark": "line",  
-        "encoding": {
-          "y": {
-            "field": "Age group",
-            "type": "nominal",
-            "axis": {
-              "title": "Age Group"
-            }
-          },
-          "x": {
-            "field": "Deaths",
-            "type": "quantitative",
-            "title": "Number of Deaths"
-          },
-          "detail": {
-            "field": "Age group"  
-          },
-          "color": {
-            "value": "gray"  
+    {
+      "calculate": "datum.Gender == 'Deaths(Male)' ? 'Male' : datum.Gender == 'Deaths(Female)' ? 'Female' : 'Combined'",
+      "as": "GenderLabel"
+    }
+  ],
+  "layer": [
+    {
+      "mark": "line",  
+      "encoding": {
+        "y": {
+          "field": "Age group",
+          "type": "nominal",
+          "axis": {
+            "title": "Age Group"
           }
-        }
-      },
-      {
-        "mark": {
-          "type": "point",
-          "filled": true
         },
-        "encoding": {
-          "y": {
-            "field": "Age group",
-            "type": "nominal"
-          },
-          "x": {
-            "field": "Deaths",
-            "type": "quantitative"
-          },
-          "color": {
-            "field": "GenderLabel",  
-            "type": "nominal",
-            "scale": {
-              "range": ["#F291CF", "#59A2DE"]
-            },
-            "legend": {
-              "title": "Gender"  
-            }
-          },
-          "size": {"value": 80},
-          "tooltip": [
-            {"field": "Age group", "type": "nominal", "title": "Age Group"},
-            {"field": "GenderLabel", "type": "nominal", "title": "Gender"},
-            {"field": "Deaths", "type": "quantitative", "title": "Total Deaths"}
-          ]
+        "x": {
+          "field": "Deaths",
+          "type": "quantitative",
+          "title": "Number of Deaths"
+        },
+        "detail": {
+          "field": "Age group"  
+        },
+        "color": {
+          "value": "gray"  
         }
       }
-    ],
-    "width": 300,
-    "height": 330,
-    "config": {
-      "axis": {
-        "grid": true
+    },
+    {
+      "selection": {
+        "gender_hover": {
+          "type": "single",
+          "fields": ["GenderLabel"],
+          "on": "mouseover",
+          "empty": "all"
+        }
+      },
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "y": {
+          "field": "Age group",
+          "type": "nominal",
+          "axis": {
+            "labelFontSize": 11,   
+            "titleFontSize": 13   
+          }
+          
+        },
+        "x": {
+          "field": "Deaths",
+          "type": "quantitative",
+          "axis": {
+          "labelFontSize": 12,   
+          "titleFontSize": 13   
+        }
+        },
+        "color": {
+          "field": "GenderLabel",  
+          "type": "nominal",
+          "scale": {
+            "range": [ "#7A7576","#F291CF","#59A2DE"]
+          },
+          "legend": {
+            "title": "Gender"  
+          }
+        },
+        "size": {"value": 80},
+        "opacity": {
+          "condition": {
+            "selection": "gender_hover",
+            "value": 1
+          },
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Age group", "type": "nominal", "title": "Age Group"},
+          {"field": "GenderLabel", "type": "nominal", "title": "Gender"},
+          {"field": "Deaths", "type": "quantitative", "title": "Total Deaths"}
+        ]
       }
     }
+  ],
+  "width": 400,
+  "height": 400,
+  "config": {
+    "axis": {
+      "grid": true
+    }
   }
-  
+}

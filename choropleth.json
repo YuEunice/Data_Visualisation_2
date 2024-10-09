@@ -1,12 +1,18 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Crude Death Rate and Deaths by State in Malaysia, 2022",
-  "width": 750,
-  "height": 430,
+  "background": "#f3f6f8", 
+  "title": {
+    "text": "Crude Death Rate by State in Malaysia (2022)",
+    "fontSize": 20 ,
+    "font": "Serif"
+    },
+  
+  "width": 1070,
+  "height": 480,
   "projection": {
     "type": "equalEarth",
-    "center": [109, 3],
-    "scale": 2300
+    "center": [109, 3.9],
+    "scale": 2800
   },
   "params": [
     {

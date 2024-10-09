@@ -1,0 +1,91 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    padding: 15px;
+    background-color: #c0c9df;
+}
+
+@font-face {
+    font-family: 'Algerian';
+    src: url('fonts/Algerian Regular.ttf') format('truetype'); /* Adjust the path as necessary */
+}
+
+h1 {
+    font-family: 'Algerian', serif; 
+    font-size: 2.9em;
+    color: #04437ad0;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.dashboard {
+    background-color: #E7ECF0;
+    width: 1300px;
+    margin: auto;
+    position: relative;
+    height:2280px
+}
+
+#choropleth_map {
+    left: 20px;
+    margin-bottom: 10px;
+}
+
+.bottom-charts {
+    display: flex;
+    width: 1100px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#diverging_bar {
+    left: 50px;
+    margin-bottom: 20px;
+}
+
+#dot_plot {
+    left: 50px;
+}
+
+#citizen_isotype, #non_citizen_isotype {
+    display: none; /* Hide by default */
+    left : -280px;
+}
+
+#donut_dropdown {
+    margin: 20px;
+    position: absolute;
+    top: 1620px;
+    left: 800px; /* Adjusts the position of the donut dropdown */
+}
+#citizen_dropdown {
+    margin: 20px;
+    position: absolute;
+    top: 1620px;
+    left: 250px; /* Adjusts the position of the dropdown */
+}
+
+#malay_donut_chart, #chinese_donut_chart, #indians_donut_chart, #others_donut_chart,#non_citizen_donut_chart {
+    display: none; /* Hide by default */
+    left : 360px;
+    top: -380px;
+}
+
+#medically_time_series, #non_medically_time_series {
+    display: none; /* Hide by default */
+    top: -200px;
+}
+
+#medically_status_dropdown{
+    margin: 20px;
+    position: absolute;
+    top: 2180px;
+    left: 420px; /* Adjusts the position of the dropdown */
+}

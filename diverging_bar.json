@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "transparent", 
   "description": "A population pyramid for crude death rates by gender and state in Malaysia, 2022",
   "data": {
     "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Total_deaths_states_data.csv",
@@ -31,12 +32,13 @@
   ],
   "title": {
     "text": "Gendered Crude Death Rates by State in Malaysia (2022)",
-    "fontSize": 14,
+    "fontSize": 20,
+    "font": "Serif",
     "anchor": "middle",
     "offset": 15  
   },
-  "width": 300,
-  "height": 300,
+  "width": 400,
+  "height": 400,
   "params": [
     {
       "name": "Gender_Selection",
@@ -57,7 +59,9 @@
           "field": "State",
           "type": "nominal",
           "axis": {
-            "title": "States"
+            "title": "States",
+              "labelFontSize": 11,   
+              "titleFontSize": 13   
           },
           "sort": "-x"  
         },
@@ -66,7 +70,9 @@
           "type": "quantitative",
           "title": "Crude Death Rate",
           "axis": {
-            "format": "s"
+            "format": "s",
+            "labelFontSize": 12,   
+              "titleFontSize": 13   
           },
           "scale": {
             "domain": [-10, 10]  
@@ -96,7 +102,7 @@
           {
             "field": "CrudeDeathRateTooltip",
             "type": "quantitative",
-            "title": "Crude Death Rate"
+            "title": "Crude Death Rate (per 1000 population)"
           },
           {
             "field": "TotalDeaths",
@@ -116,9 +122,10 @@
      {
       "mark": {
         "type": "text",
-        "dx": 170, 
+        "dx": 240, 
         "align": "left",
-        "fontSize": 11.5,
+        "fontSize": 13,
+        "font": "Serif",
         "fontStyle": "italic"
       },
       "encoding": {

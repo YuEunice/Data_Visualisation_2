@@ -4,87 +4,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crude Death Rate and Total Deaths by State in Malaysia, 2022</title>
+    <title>Deaths by State in Malaysia, 2022</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.0"></script>
-    <style>
-        html, body {
-            height: 100%; /* Ensures the body and HTML cover full height */
-            margin: 0;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            text-align: center;
-            padding: 15px;
-            background-color: #c0c9df; /* Background color outside the dashboard */
-        }
-
-        h1 {
-            font-family: 'Impact', fantasy;
-            font-size: 2.5em;
-            color: #4b4243;
-            margin: 20px 0;
-            display: inline-block;
-        }
-
-        .dashboard {
-            background-color: rgb(231, 236, 240); /* Dashboard background color */
-            width: 1000px;
-            margin: auto; /* Centers the dashboard within the body */
-        }
-
-        #choropleth_map {
-            left: -50px;
-            margin-bottom: 10px;
-        }
-
-        .bottom-charts {
-            display: flex;
-            width: 1000px;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
-
-        #diverging_bar {
-            left: 50px;
-        }
-        
-
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="dashboard">
-        <h1>Overview of Deaths by State in Malaysia, 2022</h1>
-        <div id="choropleth_map"></div> <!-- Choropleth map on top -->
-        
+        <h1>Overview of Deaths in Malaysia, 2022</h1>
+
+        <div id="choropleth_map"></div>
+
         <div class="bottom-charts">
-            <div id="diverging_bar"></div> <!-- Diverging bar on the left -->
-            <div id="dot_plot"></div> <!-- Dot plot (or another chart) on the right -->
+            <div id="diverging_bar"></div>
+            <div id="dot_plot"></div>
         </div>
+
+        <!-- Dropdown to select between Citizen and Non-Citizen -->
+        <div id="citizen_dropdown">
+            <label for="isotype_select">Select Citizenship: </label>
+            <select id="isotype_select" onchange="showIsotypeChart()">
+                <option value="citizen">Citizen</option>
+                <option value="non_citizen">Non-Citizen</option>
+            </select>
+        </div>
+
+        <div id="citizen_isotype"></div>
+        <div id="non_citizen_isotype"></div>
+
+        <!-- Dropdown to select between different donut charts -->
+        <div id="donut_dropdown">
+            <label for="donut_select">Select Ethnicity: </label>
+            <select id="donut_select" onchange="showDonutChart()">
+                <option value="malay">Malay</option>
+                <option value="chinese">Chinese</option>
+                <option value="indian">Indian</option>
+                <option value="others">Others</option>
+                <option value="non_citizen">Non-Citizen</option>
+            </select>
+        </div>
+
+        <div id="malay_donut_chart" ></div>
+        <div id="chinese_donut_chart" ></div>
+        <div id="indians_donut_chart" ></div>
+        <div id="others_donut_chart" ></div>
+        <div id="non_citizen_donut_chart"></div>
+
+         <!-- Dropdown to select between Medically or Non-Medically -->
+         <div id="medically_status_dropdown">
+            <label for="medically_status_select">Select Medically Status: </label>
+            <select id="medically_status_select" onchange="showMedicallyStatusChart()">
+                <option value="medically">Medically</option>
+                <option value="non_medically">Non-Medically</option>
+            </select>
+        </div>
+        <div id="medically_time_series"></div>
+        <div id="non_medically_time_series"></div>
+
     </div>
 
     <script type="text/javascript">
         var spec1 = "choropleth.json";
+        var spec2 = "diverging_bar.json";
+        var spec3 = "dot_plot.json";
+        var spec4 = "citizen_isotype.json";
+        var spec5 = "non_citizen_isotype.json";
+        var spec6 = "malay_donut_chart.json";
+        var spec7 = "chinese_donut_chart.json";
+        var spec8 = "indians_donut_chart.json";
+        var spec9 = "others_donut_chart.json";
+        var spec10 = "non_citizen_donut_chart.json";
+        var spec11 = "medically_time_series.json";
+        var spec12 = "non_medically_time_series.json";
+
+
         vegaEmbed('#choropleth_map', spec1).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
-
-        var spec2 = "diverging_bar.json";
+        
         vegaEmbed('#diverging_bar', spec2).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
+       
+        vegaEmbed('#dot_plot', spec3).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
 
-        //var spec3 = "dot_plot.json";
-        //vegaEmbed('#dot_plot', spec3).then(function(result) {
-             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        //}).catch(console.error);
+        // Embed both charts initially but hide them.
+        vegaEmbed('#citizen_isotype', spec4).then(function(result) {
+            // Citizen chart is loaded, initially hidden.
+        }).catch(console.error);
+
+        vegaEmbed('#non_citizen_isotype', spec5).then(function(result) {
+            // Non-Citizen chart is loaded, initially hidden.
+        }).catch(console.error);
+
+        vegaEmbed('#malay_donut_chart', spec6).then(function(result) {
+        }).catch(console.error);
+    
+        vegaEmbed('#chinese_donut_chart', spec7).then(function(result) {
+        }).catch(console.error);
+    
+        vegaEmbed('#indians_donut_chart', spec8).then(function(result) {
+        }).catch(console.error);
+    
+        vegaEmbed('#others_donut_chart', spec9).then(function(result) {
+        }).catch(console.error);
+    
+        vegaEmbed('#non_citizen_donut_chart', spec10).then(function(result) {
+        }).catch(console.error);
+
+        vegaEmbed('#medically_time_series', spec11).then(function(result) {
+        }).catch(console.error);
+
+        vegaEmbed('#non_medically_time_series', spec12).then(function(result) {
+        }).catch(console.error);
+
+        // Function to display the selected isotype chart
+        function showIsotypeChart() {
+            var selectBox = document.getElementById("isotype_select");
+            var selectedValue = selectBox.value;
+
+            // Hide both charts initially 
+            document.getElementById("citizen_isotype").style.display = "none";
+            document.getElementById("non_citizen_isotype").style.display = "none";
+
+            // Show the selected chart
+            if (selectedValue === "citizen") {
+                document.getElementById("citizen_isotype").style.display = "block";
+            } else if (selectedValue === "non_citizen") {
+                document.getElementById("non_citizen_isotype").style.display = "block";
+            }
+        }
+
+        // Function to display the selected donut chart
+        function showDonutChart() {
+            var selectBox = document.getElementById("donut_select");
+            var selectedValue = selectBox.value;
+
+            // Hide all donut charts initially
+            document.getElementById("malay_donut_chart").style.display = "none";
+            document.getElementById("chinese_donut_chart").style.display = "none";
+            document.getElementById("indians_donut_chart").style.display = "none";
+            document.getElementById("others_donut_chart").style.display = "none";
+            document.getElementById("non_citizen_donut_chart").style.display = "none";
+
+            // Show the selected donut chart
+            if (selectedValue === "malay") {
+                document.getElementById("malay_donut_chart").style.display = "block";
+            } else if (selectedValue === "chinese") {
+                document.getElementById("chinese_donut_chart").style.display = "block";
+            } else if (selectedValue === "indian") {
+                document.getElementById("indians_donut_chart").style.display = "block";
+            } else if (selectedValue === "others") {
+                document.getElementById("others_donut_chart").style.display = "block";
+            } else if (selectedValue === "non_citizen") {
+                document.getElementById("non_citizen_donut_chart").style.display = "block";
+            }
+        }
+
+        function showMedicallyStatusChart() {
+            var selectBox = document.getElementById("medically_status_select");
+            var selectedValue = selectBox.value;
+
+            // Hide all time series charts initially
+            document.getElementById("medically_time_series").style.display = "none";
+            document.getElementById("non_medically_time_series").style.display = "none";
+
+            // Show the selected time series chart
+            if (selectedValue === "medically") {
+                document.getElementById("medically_time_series").style.display = "block";
+            } else if (selectedValue === "non_medically") {
+                document.getElementById("non_medically_time_series").style.display = "block";
+            }
+        }
+
+        //Set initial isotype chart to be "Citizen" when the page loads
+        document.getElementById("citizen_isotype").style.display = "block";
+
+        //Set initial donut chart to be "Malay" when the page loads
+        document.getElementById("malay_donut_chart").style.display = "block";
+
+        //Set initial time series chart to be "Medically" when the page loads
+        document.getElementById("medically_time_series").style.display = "block";
+
+        
     </script>
 
 </body>

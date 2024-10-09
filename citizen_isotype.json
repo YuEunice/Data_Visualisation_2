@@ -1,0 +1,74 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "transparent",
+    "config": {
+      "view": {
+        "stroke": null
+      }
+    },
+    "width": 400,
+    "height": 400,
+    "title": {
+      "text": "Crude Death Rate for Citizen in Malaysia (2022)",
+      "anchor": "middle",
+      "fontSize": 20,
+      "font": "Serif"
+    },
+    "data": {
+      "values": [
+        {"Group": "Citizen", "Ethnic group": "Malay", "image": "Malay", "col": 1, "Crude Death Rate": 6.2, "Total Deaths": 108627},
+        {"Group": "Citizen", "Ethnic group": "Malay", "image": "Malay", "col": 2, "Crude Death Rate": 6.2, "Total Deaths": 108627},
+        {"Group": "Citizen", "Ethnic group": "Malay", "image": "Malay", "col": 3, "Crude Death Rate": 6.2, "Total Deaths": 108627},
+        {"Group": "Citizen", "Ethnic group": "Malay", "image": "Malay", "col": 4, "Crude Death Rate": 6.2, "Total Deaths": 108627},
+        {"Group": "Citizen", "Ethnic group": "Malay", "image": "Malay", "col": 5, "Crude Death Rate": 6.2, "Total Deaths": 108627},
+        {"Group": "Citizen", "Ethnic group": "Malay", "image": "Malay", "col": 6, "Crude Death Rate": 6.2, "Total Deaths": 108627},
+        {"Group": "Citizen", "Ethnic group": "Chinese", "image": "Chinese", "col": 1, "Crude Death Rate": 7.8, "Total Deaths": 53333},
+        {"Group": "Citizen", "Ethnic group": "Chinese", "image": "Chinese", "col": 2, "Crude Death Rate": 7.8, "Total Deaths": 53333},
+        {"Group": "Citizen", "Ethnic group": "Chinese", "image": "Chinese", "col": 3, "Crude Death Rate": 7.8, "Total Deaths": 53333},
+        {"Group": "Citizen", "Ethnic group": "Chinese", "image": "Chinese", "col": 4, "Crude Death Rate": 7.8, "Total Deaths": 53333},
+        {"Group": "Citizen", "Ethnic group": "Chinese", "image": "Chinese", "col": 5, "Crude Death Rate": 7.8, "Total Deaths": 53333},
+        {"Group": "Citizen", "Ethnic group": "Chinese", "image": "Chinese", "col": 6, "Crude Death Rate": 7.8, "Total Deaths": 53333},
+        {"Group": "Citizen", "Ethnic group": "Chinese", "image": "Chinese", "col": 7, "Crude Death Rate": 7.8, "Total Deaths": 53333},
+        {"Group": "Citizen", "Ethnic group": "Chinese", "image": "Chinese", "col": 8, "Crude Death Rate": 7.8, "Total Deaths": 53333},
+        {"Group": "Citizen", "Ethnic group": "Indians", "image": "Indian", "col": 1, "Crude Death Rate": 8.5, "Total Deaths": 16935},
+        {"Group": "Citizen", "Ethnic group": "Indians", "image": "Indian", "col": 2,"Crude Death Rate": 8.5, "Total Deaths": 16935},
+        {"Group": "Citizen", "Ethnic group": "Indians", "image": "Indian", "col": 3,"Crude Death Rate": 8.5, "Total Deaths": 16935},
+        {"Group": "Citizen", "Ethnic group": "Indians", "image": "Indian", "col": 4,"Crude Death Rate": 8.5, "Total Deaths": 16935},
+        {"Group": "Citizen", "Ethnic group": "Indians", "image": "Indian", "col": 5,"Crude Death Rate": 8.5, "Total Deaths": 16935},
+        {"Group": "Citizen", "Ethnic group": "Indians", "image": "Indian", "col": 6,"Crude Death Rate": 8.5, "Total Deaths": 16935},
+        {"Group": "Citizen", "Ethnic group": "Indians", "image": "Indian", "col": 7,"Crude Death Rate": 8.5, "Total Deaths": 16935},
+        {"Group": "Citizen", "Ethnic group": "Indians", "image": "Indian", "col": 8,"Crude Death Rate": 8.5, "Total Deaths": 16935},
+        {"Group": "Citizen", "Ethnic group": "Indians", "image": "Indian", "col": 9,"Crude Death Rate": 8.5, "Total Deaths": 16935},
+        {"Group": "Citizen", "Ethnic group": "Others", "image": "Others", "col": 1, "Crude Death Rate": 9.1, "Total Deaths": 2024},
+        {"Group": "Citizen", "Ethnic group": "Others", "image": "Others", "col": 2,"Crude Death Rate": 9.1, "Total Deaths": 2024},
+        {"Group": "Citizen", "Ethnic group": "Others", "image": "Others", "col": 3, "Crude Death Rate": 9.1, "Total Deaths": 2024},
+        {"Group": "Citizen", "Ethnic group": "Others", "image": "Others", "col": 4, "Crude Death Rate": 9.1, "Total Deaths": 2024},
+        {"Group": "Citizen", "Ethnic group": "Others", "image": "Others", "col": 5, "Crude Death Rate": 9.1, "Total Deaths": 2024},
+        {"Group": "Citizen", "Ethnic group": "Others", "image": "Others", "col": 6, "Crude Death Rate": 9.1, "Total Deaths": 2024},
+        {"Group": "Citizen", "Ethnic group": "Others", "image": "Others", "col": 7, "Crude Death Rate": 9.1, "Total Deaths": 2024},
+        {"Group": "Citizen", "Ethnic group": "Others", "image": "Others", "col": 8, "Crude Death Rate": 9.1, "Total Deaths": 2024},
+        {"Group": "Citizen", "Ethnic group": "Others", "image": "Others", "col": 9, "Crude Death Rate": 9.1, "Total Deaths": 2024}
+      ]
+    },
+    "transform": [
+      {
+        "calculate": "{'Malay': 'https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/image/Malay(Male).png', 'Malay(Female)': 'https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/image/Malay(Female).png','Chinese': 'https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/image/Chinese(Male).png','Chinese(Female)': 'https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/image/Chinese(Female).png','Indian': 'https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/image/Indian(Male).png', 'Indian(Female)': 'https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/image/Indian(Female).png','Others': 'https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/image/Others.png'}[datum.image]",
+        "as": "image"
+      },
+      {"window": [{"op": "rank", "as": "rank"}], "groupby": ["Group"]}
+    ],
+    "mark": {"type": "image", "width": 80, "height": 85},
+    "encoding": {
+      "x": {"field": "col", "type": "ordinal", "axis": null},
+      "y": {"field": "Ethnic group", "type": "nominal", "axis": {"title": ""}},
+      "row": {"field": "Group", "header": {"title": "","labelFontSize": 12}},
+      "url": {"field": "image", "type": "nominal"},
+      "tooltip": [
+      {"field": "Group", "type": "nominal", "title": "Citizenship Status"},
+      {"field": "Ethnic group", "type": "nominal", "title": "Ethnic Group"},
+      {"field": "Crude Death Rate", "type": "quantitative", "title": "Crude Death Rate(per 1000 population)"},
+      {"field": "Total Deaths", "type": "quantitative", "title": "Total Deaths"}
+    ]
+    }
+  }
+  

@@ -1,0 +1,70 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Causes of Death in Johor",
+      "anchor": "middle",
+      "fontSize": 16
+    },
+    "hconcat": [
+      {
+        "title": "Medically Certified Causes",
+        "data": {
+          "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Ten_principal_causes.csv",
+          "format": {"type": "csv"}
+        },
+        "transform": [
+          {
+            "filter": "datum.Category === 'Medically certified'&& datum.State === 'Johor'"
+          }
+        ],
+        "mark": {
+          "type": "arc",
+          "innerRadius": 50,
+          "outerRadius": 100,
+          "tooltip": true
+        },
+        "encoding": {
+          "theta": {
+            "field": "Number of Cases",
+            "type": "quantitative",
+            
+            "stack": true
+          },
+          "color": {
+            "field": "Causes",
+            "type": "nominal"
+          }
+        }
+      },
+      {
+        "title": "Non-Medically Certified Causes",
+        "data": {
+          "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Ten_principal_causes.csv",
+          "format": {"type": "csv"}
+        },
+        "transform": [
+          {
+            "filter": "datum.Category === 'Non-medically certified' &&  datum.State === 'Johor'"
+          }
+        ],
+        "mark": {
+          "type": "arc",
+          "innerRadius": 50,
+          "outerRadius": 100,
+          "tooltip": true
+        },
+        "encoding": {
+          "theta": {
+            "field": "Number of Cases",
+            "type": "quantitative",
+            "stack": true
+          },
+          "color": {
+            "field": "Causes",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  }
+  

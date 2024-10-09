@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "transparent",
+    "config": {
+      "view": {
+        "stroke": null
+      }
+    },
+    "width": 400,
+    "height": 400,
+    "title": {
+      "text": "Crude Death Rate for Non-Citizen in Malaysia (2022)",
+      "anchor": "middle",
+      "fontSize": 20,
+      "font": "Serif"
+    },
+    "data": {
+      "values": [
+        {"Group": "Non-Citizen", "image": "Non-Citizen", "col": 1,"Crude Death Rate":1.5, "Total Deaths": 3692},
+        {"Group": "Non-Citizen", "image": "Non-Citizen", "col": 2,"Crude Death Rate":1.5, "Total Deaths": 3692}
+    
+      ]
+    },
+    "transform": [
+      {
+        "calculate": "{'Non-Citizen': 'https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/image/Non-citizen.png'}[datum.image]",
+        "as": "image"
+      },
+      {"window": [{"op": "rank", "as": "rank"}], "groupby": ["Group"]}
+    ],
+    "mark": {"type": "image", "width": 250, "height": 250},
+    "encoding": {
+      "x": {"field": "col", "type": "ordinal", "axis": null},
+      "y": {"field": "Group", "type": "nominal", "axis": {"title": ""}},
+
+      "url": {"field": "image", "type": "nominal"},
+      "tooltip": [
+      {"field": "Group", "type": "nominal", "title": "Citizenship Status"},
+      {"field": "Crude Death Rate", "type": "quantitative", "title": "Crude Death Rate"},
+      {"field": "Total Deaths", "type": "quantitative", "title": "Total Deaths"}
+    ]
+    }
+  }
+  
