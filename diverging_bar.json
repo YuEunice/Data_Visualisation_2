@@ -102,7 +102,7 @@
           {
             "field": "CrudeDeathRateTooltip",
             "type": "quantitative",
-            "title": "Crude Death Rate (per 1000 population)"
+            "title": "Crude Death Rate "
           },
           {
             "field": "TotalDeaths",

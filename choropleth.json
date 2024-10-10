@@ -140,7 +140,7 @@
           {
             "field": "Crude death rate",
             "type": "quantitative",
-            "title": "Crude Death Rate (per 1,000 population)"
+            "title": "Crude Death Rate "
           }
         ]
       }
