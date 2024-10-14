@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "background": "transparent", 
-  "description": "A population pyramid for crude death rates by gender and state in Malaysia, 2022",
   "data": {
     "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Total_deaths_states_data.csv",
     "format": {
@@ -37,7 +36,7 @@
     "anchor": "middle",
     "offset": 15  
   },
-  "width": 400,
+  "width": 350,
   "height": 400,
   "params": [
     {
@@ -60,19 +59,23 @@
           "type": "nominal",
           "axis": {
             "title": "States",
-              "labelFontSize": 11,   
-              "titleFontSize": 13   
-          },
-          "sort": "-x"  
+              "labelFontSize": 13,   
+              "titleFontSize": 15 , 
+              "labelFont": "Serif",
+              "titleFont": "Serif" 
+          }
+     
         },
         "x": {
           "field": "CrudeDeathRate",
           "type": "quantitative",
-          "title": "Crude Death Rate",
+          "title": "Crude Death Rate (per 1,000 population)",
           "axis": {
             "format": "s",
-            "labelFontSize": 12,   
-              "titleFontSize": 13   
+            "labelFontSize": 13,   
+            "titleFontSize": 15  , 
+            "labelFont": "Serif",
+            "titleFont": "Serif"
           },
           "scale": {
             "domain": [-10, 10]  
@@ -85,7 +88,11 @@
             "range": ["#F291CF", "#59A2DE"]
           },
           "legend": {
-            "title": "Gender"
+            "title": "Gender",
+            "titleFontSize": 15,
+            "titleFont": "Serif",
+            "labelFont": "Serif",
+            "labelFontSize": 13
           }
         },
         "tooltip": [
@@ -102,7 +109,7 @@
           {
             "field": "CrudeDeathRateTooltip",
             "type": "quantitative",
-            "title": "Crude Death Rate "
+            "title": "Crude Death Rate (per 1,000 population)"
           },
           {
             "field": "TotalDeaths",
@@ -115,8 +122,21 @@
             "test": "Gender_Selection === null || datum.GenderLabel === Gender_Selection",
             "value": 1
           },
-          "value": 0.6
+          "value": 0.5
         }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 1.5,
+        "color": "#6b6a6a"
+      },
+      "encoding": {
+        "x": {"value": 200}, 
+        "y": {"value": 390},
+        "x2": {"value": 267},
+        "y2": {"value": 377}
       }
     },
      {
@@ -124,30 +144,71 @@
         "type": "text",
         "dx": 240, 
         "align": "left",
-        "fontSize": 13,
+        "fontSize": 14,
         "font": "Serif",
-        "fontStyle": "italic"
+        "color": "#0a18e0",
+        "fontWeight": "bold"
       },
       "encoding": {
-        "x": {
-          "value": 10  
-        },
-        
-        "y": {
-          "field": "State",
-          "type": "nominal"
-        },
-        "text": {
-          "value": "Lowest Crude Death Rate"  
-        }
+        "x": {"value": 33},  "y": {"value": 345},"text": {"value": "Putrajaya"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 240, 
+        "align": "left",
+        "fontSize": 14,
+        "font": "Serif",
+        "color": "#4d4c4c"
       },
-      "transform": [
-        {
-          "filter": "datum.State == 'WP Putrajaya'"  
-        }
-      ]
+      "encoding": {
+        "x": {"value": 97},  "y": {"value": 345},"text": {"value": "has the"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 240, 
+        "align": "left",
+        "fontSize": 14,
+        "font": "Serif",
+        "color": "black",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"value": 140},  "y": {"value": 345},"text": {"value": "lowest"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 240, 
+        "align": "left",
+        "fontSize": 14,
+        "font": "Serif",
+        "color": "#4d4c4c"
+      },
+      "encoding": {
+        "x": {"value": 33},  "y": {"value": 360},"text": {"value": "crude death rate due to"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 240, 
+        "align": "left",
+        "fontSize": 14,
+        "font": "Serif",
+        "color": "#4d4c4c"
+      },
+      "encoding": {
+        "x": {"value": 33},  "y": {"value": 375},"text": {"value": "advanced healthcare"}
+      }
     }
+
   ],
+
   "config": {
     "view": {"stroke": null},
     "axis": {"grid": false}

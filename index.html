@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deaths by State in Malaysia, 2022</title>
+    <title>33274622_Data_Visualisation_2</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.0"></script>
@@ -12,15 +12,125 @@
 </head>
 
 <body>
+    
 
     <div class="dashboard">
+        <footer id="footer-info">
+            <p><em>Eunice Yu Peini | 33274622 | Tutorial 3 | Dr Ting Chai Wen | Data Visualisation 2 | October 2024</em></p>
+        </footer>
         <h1>Overview of Deaths in Malaysia, 2022</h1>
+        <div id="annotation-container"></div>
+        <div id="annotation-container">
+            <svg width="100%" height="100%">
+              <!-- For Perak -->
+              <!-- Line annotation -->
+              <line x1="280" y1="290" x2="210" y2="245" style="stroke:#444;stroke-width:2"/>
+              
+              <!-- Text annotation -->
+              <text x="105" y="210" fill="black" font-size="14px" font-family="Serif" style="stroke: rgb(235, 75, 75);">
+                Perak 
+              </text>
+
+               <!-- Text annotation -->
+             <text x="142" y="210" fill="black" font-size="14px" font-family="Serif">
+                has the 
+               </text> 
+               <!-- Text annotation -->
+               <text x="186" y="210" fill="black" font-size="14px" font-family="Serif" font-weight="bold">
+                highest 
+               </text> 
+                
+                <!-- Text annotation -->
+              <text x="105" y="225" fill="black" font-size="14px" font-family="Serif">
+                crude death rate at 
+              </text>
+
+              <!-- Text annotation -->
+              <text x="212" y="225" fill="black" font-size="14px" font-family="Serif" font-weight="bold">
+                8.9 
+              </text>
+
+               <!-- Text annotation -->
+               <text x="105" y="240" fill="black" font-size="14px" font-family="Serif" font-weight="bold">
+                per 1,000 population.
+              </text>
+
+              <!-- For Selangor -->
+              <!-- Line annotation -->
+              <line x1="310" y1="350" x2="250" y2="385" style="stroke:#444;stroke-width:2"/>
+
+              <!-- Text annotation -->
+              <text x="130" y="400" fill="black" font-size="14px" font-family="Serif" style="stroke: rgb(247, 136, 10);">
+                Selangor
+              </text>
+
+               <!-- Text annotation -->
+             <text x="185" y="400" fill="black" font-size="14px" font-family="Serif">
+                has the 
+               </text> 
+               <!-- Text annotation -->
+               <text x="230" y="400" fill="black" font-size="14px" font-family="Serif" font-weight="bold">
+                highest 
+               </text> 
+                
+                <!-- Text annotation -->
+              <text x="130" y="415" fill="black" font-size="14px" font-family="Serif">
+                total deaths in 2022 with 
+              </text>
+
+              <!-- Text annotation -->
+              <text x="130" y="430" fill="black" font-size="14px" font-family="Serif" font-weight="bold">
+                32,861.
+              </text>
+            </svg>
+        </div>
 
         <div id="choropleth_map"></div>
-
-        <div class="bottom-charts">
+        <div class="diverging-dotplot-container">
             <div id="diverging_bar"></div>
             <div id="dot_plot"></div>
+        </div>
+
+        <div id="isotype-donut-container">
+            <!-- Isotype charts -->
+            <div id="citizen_isotype"></div>
+            <div id="non_citizen_isotype"></div>
+            
+            
+            <!-- Donut charts -->
+            <div id="non_citizen_donut_chart"></div>  
+            <div id="citizen_donut_chart"></div>
+            
+            
+        </div>
+        <div class="description-container">
+            
+            <!-- Left description for the diverging bar chart -->
+            <div class="left-description">
+                <p id="title_description">
+                    Citizens 
+                </p>
+                <p id="chart_description">
+                    The isotype and donut charts show the crude death rate and primary causes of death for <strong>Malaysian citizens</strong> in 2022. 
+                    The  <strong style="color: #0b6d58;">Malay</strong> population had the lowest crude death rate at <strong>6.2 per 1,000 people</strong>,
+                    while other groups, such as the <strong>Indians</strong> and <strong>Others</strong>, experienced higher rates.
+                    <strong style="color: #71A8C3;">Ischaemic heart disease</strong> was the leading cause of death across all ethnic groups.
+                    Users can use the dropdown menu to switch to display data for non-citizens.
+                </p>
+            </div>
+
+            <!-- Right description for the dot plot -->
+            <div class="right-description">
+                <p id="title_description">
+                    Non-Citizens 
+                </p>
+                <p id="chart_description">
+                    The isotype and donut chart displays the crude death rate and primary causes of death for <strong>non-citizens</strong> in 2022. 
+                    The crude death rate for non-citizens stands at <strong>1.5 per 1,000 people</strong>, which is significantly lower compared to that of citizen.
+                    However, similar to citizens, <strong style="color: #71A8C3;">Ischaemic heart disease</strong> remains the leading cause of death among <strong>non-citizens</strong>,
+                    highlighting a common health issue regardless of citizenship status. Users can use the dropdown menu to switch to display data for citizens.
+                </p>
+            </div>
         </div>
 
         <!-- Dropdown to select between Citizen and Non-Citizen -->
@@ -32,30 +142,19 @@
             </select>
         </div>
 
-        <div id="citizen_isotype"></div>
-        <div id="non_citizen_isotype"></div>
 
         <!-- Dropdown to select between different donut charts -->
         <div id="donut_dropdown">
-            <label for="donut_select">Select Ethnicity: </label>
+            <label for="donut_select">Select Citizenship: </label>
             <select id="donut_select" onchange="showDonutChart()">
-                <option value="malay">Malay</option>
-                <option value="chinese">Chinese</option>
-                <option value="indian">Indian</option>
-                <option value="others">Others</option>
+                <option value="citizen">Citizen</option>
                 <option value="non_citizen">Non-Citizen</option>
             </select>
         </div>
 
-        <div id="malay_donut_chart" ></div>
-        <div id="chinese_donut_chart" ></div>
-        <div id="indians_donut_chart" ></div>
-        <div id="others_donut_chart" ></div>
-        <div id="non_citizen_donut_chart"></div>
-
          <!-- Dropdown to select between Medically or Non-Medically -->
          <div id="medically_status_dropdown">
-            <label for="medically_status_select">Select Medically Status: </label>
+            <label for="medically_status_select">Select Certified Status: </label>
             <select id="medically_status_select" onchange="showMedicallyStatusChart()">
                 <option value="medically">Medically</option>
                 <option value="non_medically">Non-Medically</option>
@@ -63,6 +162,48 @@
         </div>
         <div id="medically_time_series"></div>
         <div id="non_medically_time_series"></div>
+
+        <div class="description-container">
+            
+            <!-- Left description for the diverging bar chart -->
+            <div class="left-description">
+                <p id="title_description">
+                    Medically Certified Causes of Deaths
+                </p>
+                <p id="chart_description">
+                    This line chart illustrates the trends in <strong>medically-certified</strong> causes of death in Malaysia from 2000 to 2022. 
+                    It highlights a sharp spike in <strong style="color: #717EC3;">COVID-19 inflection</strong> deaths in 2020, 
+                    reflecting the severe impact of the pandemic. It also highlights trends in other major causes of death, including 
+                    <strong style="color: #71A8C3;">Ischaemic heart disease</strong> and
+                    <strong style="color: #B49FCF;">Pneumonia</strong>, 
+                    which show steady increases over time. Users can switch between <strong>medically</strong> and 
+                    <strong>non-medically certified</strong> data using the dropdown menu,
+                    offering a more complete view of death causes in Malaysia.
+                </p>
+            </div>
+            
+            <!-- Right description for the dot plot -->
+            <div class="right-description">
+                <p id="title_description">
+                    Non-Medically Certified Causes of Deaths
+                </p>
+                <p id="chart_description">
+                    This line chart depicts trends in <strong>non-medically certified</strong> causes of death in Malaysia from 2000 to 2022, 
+                    with <strong style="color: #023618;">Old age 65 years and over</strong> consistently standing out as the
+                    leading cause, far surpassing other causes throughout the entire period. This dominance underscores the challenges associated with Malaysia's aging population.
+                    Users can switch between <strong>non-medically</strong> and <strong>medically certified</strong> 
+                    data using the dropdown menu, providing insights into how different causes are categorized or underreported.
+
+                </p>
+            </div>
+        </div>
+        <footer id="data-source">
+            Data Source: 
+            <a href="https://www.scribd.com/document/622344601/Jadual-Penerbitan-Perangkaan-Sebab-Kematian-Malaysia-2022-Updated" target="_blank">
+                <em>Malaysia Cause of Death Statistics 2000-2022</em> [Dataset]
+            </a>
+        </footer>
+ 
 
     </div>
 
@@ -72,13 +213,11 @@
         var spec3 = "dot_plot.json";
         var spec4 = "citizen_isotype.json";
         var spec5 = "non_citizen_isotype.json";
-        var spec6 = "malay_donut_chart.json";
-        var spec7 = "chinese_donut_chart.json";
-        var spec8 = "indians_donut_chart.json";
-        var spec9 = "others_donut_chart.json";
-        var spec10 = "non_citizen_donut_chart.json";
-        var spec11 = "medically_time_series.json";
-        var spec12 = "non_medically_time_series.json";
+        var spec6 = "citizen_donut_chart.json";
+        var spec7 = "non_citizen_donut_chart.json";
+        var spec8 = "medically_time_series.json";
+        var spec9 = "non_medically_time_series.json";
+    
 
 
         vegaEmbed('#choropleth_map', spec1).then(function(result) {
@@ -99,29 +238,21 @@
         }).catch(console.error);
 
         vegaEmbed('#non_citizen_isotype', spec5).then(function(result) {
-            // Non-Citizen chart is loaded, initially hidden.
         }).catch(console.error);
 
-        vegaEmbed('#malay_donut_chart', spec6).then(function(result) {
+        vegaEmbed('#citizen_donut_chart', spec6).then(function(result) {
         }).catch(console.error);
     
-        vegaEmbed('#chinese_donut_chart', spec7).then(function(result) {
-        }).catch(console.error);
-    
-        vegaEmbed('#indians_donut_chart', spec8).then(function(result) {
-        }).catch(console.error);
-    
-        vegaEmbed('#others_donut_chart', spec9).then(function(result) {
-        }).catch(console.error);
-    
-        vegaEmbed('#non_citizen_donut_chart', spec10).then(function(result) {
+        vegaEmbed('#non_citizen_donut_chart', spec7).then(function(result) {
         }).catch(console.error);
 
-        vegaEmbed('#medically_time_series', spec11).then(function(result) {
+        vegaEmbed('#medically_time_series', spec8).then(function(result) {
         }).catch(console.error);
 
-        vegaEmbed('#non_medically_time_series', spec12).then(function(result) {
+        vegaEmbed('#non_medically_time_series', spec9).then(function(result) {
         }).catch(console.error);
+
+      
 
         // Function to display the selected isotype chart
         function showIsotypeChart() {
@@ -146,23 +277,14 @@
             var selectedValue = selectBox.value;
 
             // Hide all donut charts initially
-            document.getElementById("malay_donut_chart").style.display = "none";
-            document.getElementById("chinese_donut_chart").style.display = "none";
-            document.getElementById("indians_donut_chart").style.display = "none";
-            document.getElementById("others_donut_chart").style.display = "none";
+            document.getElementById("citizen_donut_chart").style.display = "none";
             document.getElementById("non_citizen_donut_chart").style.display = "none";
 
             // Show the selected donut chart
-            if (selectedValue === "malay") {
-                document.getElementById("malay_donut_chart").style.display = "block";
-            } else if (selectedValue === "chinese") {
-                document.getElementById("chinese_donut_chart").style.display = "block";
-            } else if (selectedValue === "indian") {
-                document.getElementById("indians_donut_chart").style.display = "block";
-            } else if (selectedValue === "others") {
-                document.getElementById("others_donut_chart").style.display = "block";
-            } else if (selectedValue === "non_citizen") {
+            if (selectedValue === "non_citizen") {
                 document.getElementById("non_citizen_donut_chart").style.display = "block";
+            }else if (selectedValue === "citizen") {
+                document.getElementById("citizen_donut_chart").style.display = "block";
             }
         }
 
@@ -185,12 +307,11 @@
         //Set initial isotype chart to be "Citizen" when the page loads
         document.getElementById("citizen_isotype").style.display = "block";
 
-        //Set initial donut chart to be "Malay" when the page loads
-        document.getElementById("malay_donut_chart").style.display = "block";
+        //Set initial donut chart to be "citizen" when the page loads
+        document.getElementById("citizen_donut_chart").style.display = "block";
 
         //Set initial time series chart to be "Medically" when the page loads
         document.getElementById("medically_time_series").style.display = "block";
-
         
     </script>
 

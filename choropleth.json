@@ -3,11 +3,11 @@
   "background": "#f3f6f8", 
   "title": {
     "text": "Crude Death Rate by State in Malaysia (2022)",
-    "fontSize": 20 ,
+    "fontSize": 22 ,
     "font": "Serif"
     },
   
-  "width": 1070,
+  "width": 1100,
   "height": 480,
   "projection": {
     "type": "equalEarth",
@@ -114,9 +114,14 @@
             "range": ["#fee0d2", "#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#67000d"]
           },
           "legend": {
-            "title": "Deaths per 1,000 population",
+            "title": "Crude Death Rate (per 1,000 population)",
+            "titleLimit":300,
             "orient": "bottom-right",
-            "direction": "horizontal"
+            "direction": "horizontal",
+            "titleFontSize": 15,
+            "titleFont": "Serif",
+            "labelFont": "Serif",
+            "labelFontSize": 13
           }
         },
         "opacity": {
@@ -140,7 +145,7 @@
           {
             "field": "Crude death rate",
             "type": "quantitative",
-            "title": "Crude Death Rate "
+            "title": "Crude Death Rate (per 1,000 population)"
           }
         ]
       }

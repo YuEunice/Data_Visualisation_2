@@ -30,7 +30,8 @@ h1 {
     width: 1300px;
     margin: auto;
     position: relative;
-    height:2280px
+    height: 3100px;
+
 }
 
 #choropleth_map {
@@ -38,54 +39,142 @@ h1 {
     margin-bottom: 10px;
 }
 
-.bottom-charts {
+.diverging-dotplot-container {
     display: flex;
-    width: 1100px;
+    width: 100%;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
 #diverging_bar {
-    left: 50px;
-    margin-bottom: 20px;
+    padding: 15px;
+    left: 75px;
 }
 
 #dot_plot {
-    left: 50px;
+    padding: 15px;
+    left: 80px;
+}
+
+
+/* Create a flex container for isotype and donut charts */
+#isotype-donut-container {
+    display: flex;
+    justify-content: space-between; /* Add space between items */
+    align-items: flex-start; /* Align items at the top */
+    width: 100%; /* Full width of the container */
+    position: relative;
 }
 
 #citizen_isotype, #non_citizen_isotype {
     display: none; /* Hide by default */
-    left : -280px;
+    left: 120px;
+    padding: 20px;
 }
+
+
 
 #donut_dropdown {
     margin: 20px;
     position: absolute;
-    top: 1620px;
-    left: 800px; /* Adjusts the position of the donut dropdown */
+    top: 1760px;
+    left: 830px; /* Adjusts the position of the donut dropdown */
 }
+
 #citizen_dropdown {
     margin: 20px;
     position: absolute;
-    top: 1620px;
-    left: 250px; /* Adjusts the position of the dropdown */
+    top: 1760px;
+    left: 240px; /* Adjusts the position of the dropdown */
 }
 
-#malay_donut_chart, #chinese_donut_chart, #indians_donut_chart, #others_donut_chart,#non_citizen_donut_chart {
-    display: none; /* Hide by default */
-    left : 360px;
-    top: -380px;
+
+#citizen_donut_chart{
+    display: none; 
+    padding: 20px;
+    left: -75px;
 }
 
-#medically_time_series, #non_medically_time_series {
+#non_citizen_donut_chart {
+    display: none; 
+    padding: 20px;
+    left : -55px;
+}
+#medically_time_series{
+    padding: 20px;
     display: none; /* Hide by default */
-    top: -200px;
+    left: 35px;
+}
+#non_medically_time_series {
+    padding: 20px;
+    display: none; /* Hide by default */
+    left: 20px;
 }
 
 #medically_status_dropdown{
     margin: 20px;
     position: absolute;
-    top: 2180px;
-    left: 420px; /* Adjusts the position of the dropdown */
+    top: 2635px;
+    left: 500px; /* Adjusts the position of the dropdown */
+}
+
+#annotation-container {
+    position: absolute;
+    top: 100px; /* Adjust to position correctly over your map */
+    left: 30px; /* Adjust to position correctly over your map */
+    width: 1100px; /* Match the width of the choropleth map */
+    height: 480px; /* Match the height of the choropleth map */
+    pointer-events: none; /* Allow map interaction while keeping annotations on top */
+    z-index: 10; /* Ensure annotations are above the map */
+}
+
+
+/* Style for the description container */
+.description-container {
+    display: flex;
+    justify-content: space-between; /* Space between the two descriptions */
+    margin-top: 20px;
+    width: 100%;
+    background-color: #E7ECF0; /* Light background to distinguish the text */
+    padding: 15px;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Style for the left description (Diverging bar) */
+.left-description {
+    width: 35%; /* Take up about half the width */
+    text-align: left;
+    padding-left: 170px;
+}
+
+/* Style for the right description (Dot plot) */
+.right-description {
+    width: 35%; /* Take up about half the width */
+    text-align: left;
+    padding-right: 85px;
+}
+
+/* Common styling for both descriptions */
+#chart_description {
+    font-family: serif;
+    font-size: 18px;
+    color: #333;
+}
+
+#title_description {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: serif;
+    color: #032f55d0;
+}
+
+#footer-info {
+    text-align: right;
+    padding-right: 100px;
+}
+
+#data-source {
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 100px;
 }

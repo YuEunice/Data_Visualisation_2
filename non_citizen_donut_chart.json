@@ -1,98 +1,226 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "background": "transparent",
-    "title": {
-      "text": "Top 5 Death Causes Among Non-Citizens",
-      "subtitle":"\n",
-      "anchor": "start",
-      "dx": 100, 
-      "fontSize": 20,
-      "font": "Serif" 
-      
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "transparent",
+  "config": {
+    "view": {"stroke": null}  
+  },
+  "title": {
+    "text": "Primary Death Causes for Non-Citizens in Malaysia (2022)",
+    "anchor": "start",
+    "fontSize": 20,
+    "dx": -20,
+    "font": "Serif",
+    "subtitle": "\n",
+    "subtitlePadding": 60
+  },
+  "width": 290,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Major_medically_causes_ethnic.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.Category === 'Medically certified' && datum['Ethnic Group'] === 'Non-citizen'"
     },
-    "hconcat": [
-      {
-        "title": 
-        {"text": "Medically Certified",
-        "font": "Serif","fontSize":12 },
-        
-        "data": {
-          "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Principal_causes_ethnic_group.csv",
-          "format": {"type": "csv"}
-        },
-        "transform": [
-          {
-            "filter": "datum.Category === 'Medically certified' && datum['Ethnic Group'] === 'Non-citizen'"
-          },
-          {
-            "window": [{"op": "rank", "as": "rank"}],
-            "sort": [{"field": "Number of Cases", "order": "descending"}]
-          },
-          {
-            "filter": "datum.rank <= 5"
-          }
-        ],
-        "mark": {
-          "type": "arc",
-          "innerRadius": 50
-        },
-        "encoding": {
-          "theta": {
-            "field": "Number of Cases",
-            "type": "quantitative",
-            "stack": true
-          },
-          "color": {
-            "field": "Causes",
-            "type": "nominal",
-            "legend": {"title": "Causes"}
-          },
-          "tooltip": [
-            {"field": "Causes", "type": "nominal", "title": "Cause"},
-            {"field": "Number of Cases", "type": "quantitative", "title": "Number of Cases"}
-          ]
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "Number of Cases"}]
+    },
+    {
+      "filter": "datum.rank <= 5"
+    }
+  ],
+  "layer": [
+    {
+      "selection": {
+        "causeSelection": {
+          "type": "multi", 
+          "fields": ["Causes"],  
+          "bind": "legend"  
         }
       },
-      {
-        "title": {"text": "Non-Medically Certified",
-        "font": "Serif" },
-        "data": {
-          "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Principal_causes_ethnic_group.csv",
-          "format": {"type": "csv"}
+      "mark": {
+        "type": "arc",
+        "innerRadius": 72
+      },
+      "encoding": {
+        "theta": {
+          "field": "Number of Cases",
+          "type": "quantitative",
+          "stack": true
         },
-        "transform": [
-          {
-            "filter": "datum.Category === 'Non-medically certified' && datum['Ethnic Group'] === 'Non-citizen'"
+        "color": {
+          "field": "Causes",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "COVID-19 infection",
+              "Cerebrovascular diseases", 
+              "Ischaemic heart diseases",
+              "Pneumonia",
+              "Transport accidents"
+            ],
+            "range": [
+              "#717EC3",
+              "#A3B7E0",
+              "#71A8C3",
+              "#B49FCF",
+              "#C38C71"
+            ]
           },
-          {
-            "window": [{"op": "rank", "as": "rank"}],
-            "sort": [{"field": "Number of Cases", "order": "descending"}]
-          },
-          {
-            "filter": "datum.rank <= 5"
+          "legend": {
+            "title": "Cause of Death",
+            "titleFontSize": 15,
+            "titleFont": "Serif",
+            "orient": "right",
+            "labelLimit": 260,
+            "labelFontSize": 13,
+            "labelOverlap": true,
+            "labelFont": "Serif"
           }
-        ],
-        "mark": {
-          "type": "arc",
-          "innerRadius": 50
         },
-        "encoding": {
-          "theta": {
-            "field": "Number of Cases",
-            "type": "quantitative",
-            "stack": true
+        "opacity": {
+          "condition": {"selection": "causeSelection", "value": 1},  
+          "value": 0.3  
+        },
+        "tooltip": [
+          {
+            "field": "Ethnic Group",
+            "type": "nominal",
+            "title": "Citizenship"
           },
-          "color": {
+          {
             "field": "Causes",
             "type": "nominal",
-            "legend": {"title": "Causes"}
+            "title": "Cause"
           },
-          "tooltip": [
-            {"field": "Causes", "type": "nominal", "title": "Cause"},
-            {"field": "Number of Cases", "type": "quantitative", "title": "Number of Cases"}
-          ]
-        }
+          {
+            "field": "Number of Cases",
+            "type": "quantitative",
+            "title": "Number of Death Cases"
+          }
+        ]
       }
-    ]
-  }
-  
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dx": 0,
+        "dy": 0,
+        "font": "Serif",
+        "fontSize": 14,
+        "color": "#444"
+      },
+      "encoding": {
+        "text": {"value": "Non-Citizen"}
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 1.5,
+        "color": "#6b6a6a"
+      },
+      "encoding": {
+        "x": {"value": 130}, 
+        "y": {"value": 250},
+        "x2": {"value":317},
+        "y2": {"value":188}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 14,
+        "color": "#4d4c4c"
+      },
+      "encoding": {
+        "x": {"value":300},
+        "y": {"value": 160},
+        "text": {"value": "The              cause of non-citizen"}
+      }
+    },
+    
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 14,
+        "color": "black",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"value":327},
+        "y": {"value": 160},
+        "text": {"value": "largest"}
+      }
+    },
+     {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 14,
+        "color": "#4d4c4c"
+      },
+      "encoding": {
+        "x": {"value":300},
+        "y": {"value": 175},
+        "text": {"value": "deaths in 2022 was"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontWeight": "bold",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 14,
+        "color": "#71A8C3"
+      },
+      "encoding": {
+        "x": {"value":414},
+        "y": {"value": 175},
+        "text": {"value": "Ischaemic"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontWeight": "bold",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 14,
+        "color": "#71A8C3"
+      },
+      "encoding": {
+        "x": {"value":300},
+        "y": {"value": 190},
+        "text": {"value": "heart diseases"}
+      }
+    }
+  ]
+}

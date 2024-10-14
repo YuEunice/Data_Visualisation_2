@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A ranged dot plot for Male and Female Deaths by Age Group with a legend",
   "background": "transparent", 
   "title": {
-    "text": "Deaths by Age Group in Malaysia (2022)",
+    "text": "Total Deaths by Age Group in Malaysia (2022)",
     "anchor": "middle",
     "fontSize": 20,
-    "font": "Serif"
+    "font": "Serif",
+    "offset": 15  
   },
   "data": {
     "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Age_group_deaths_data.csv",
@@ -66,8 +66,10 @@
           "field": "Age group",
           "type": "nominal",
           "axis": {
-            "labelFontSize": 11,   
-            "titleFontSize": 13   
+            "labelFontSize": 13,   
+            "titleFontSize": 15 , 
+            "labelFont": "Serif",
+            "titleFont": "Serif"  
           }
           
         },
@@ -75,8 +77,10 @@
           "field": "Deaths",
           "type": "quantitative",
           "axis": {
-          "labelFontSize": 12,   
-          "titleFontSize": 13   
+            "labelFontSize": 13,   
+            "titleFontSize": 15 , 
+            "labelFont": "Serif",
+            "titleFont": "Serif"    
         }
         },
         "color": {
@@ -86,7 +90,11 @@
             "range": [ "#7A7576","#F291CF","#59A2DE"]
           },
           "legend": {
-            "title": "Gender"  
+            "title": "Gender",
+            "titleFontSize": 15,
+            "titleFont": "Serif",
+            "labelFont": "Serif",
+            "labelFontSize": 13
           }
         },
         "size": {"value": 80},
@@ -103,9 +111,128 @@
           {"field": "Deaths", "type": "quantitative", "title": "Total Deaths"}
         ]
       }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 1.5,
+        "color": "#6b6a6a"
+      },
+      "encoding": {
+        "x": {"value": 215}, 
+        "y": {"value": 390},
+        "x2": {"value": 290},
+        "y2": {"value": 238}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 14,
+        "color": "black",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"value": 230},  
+        "y": {"value": 190}, 
+        "text": {"value": "Significant"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 14,
+        "color": "#4d4c4c"
+      },
+      "encoding": {
+        "x": {"value": 298},  
+        "y": {"value": 190}, 
+        "text": {"value": "mortality rates are"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 14,
+        "color": "#4d4c4c"
+
+      },
+      "encoding": {
+        "x": {"value": 230},  
+        "y": {"value": 205}, 
+        "text": {"value": "observed in older age groups,"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 13,
+        "color": "#4d4c4c"
+      },
+      "encoding": {
+        "x": {"value": 230},  
+        "y": {"value": 220}, 
+        "text": {"value": "particularly for                 aged"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 13,
+        "color": "#F291CF",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"value": 313},  
+        "y": {"value": 220}, 
+        "text": {"value": "Females "}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -10,
+        "font": "Serif",
+        "fontSize": 13,
+        "color": "black",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"value": 230},  
+        "y": {"value": 235}, 
+        "text": {"value": "85 and over."}
+      }
     }
   ],
-  "width": 400,
+  "width": 350,
   "height": 400,
   "config": {
     "axis": {

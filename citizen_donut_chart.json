@@ -1,0 +1,241 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "transparent",
+  "title": {
+    "text": "Primary Death Causes for Malaysian Citizens (2022)",
+    "fontSize": 20,
+    "font": "Serif",
+    "anchor": "start",
+    "dx": -10
+  },
+  
+  "concat": [
+    {
+      "title": {
+        "text": "Malay",
+        "fontSize": 14,
+        "font": "Serif"
+      },
+      "width": 195,
+      "height": 140,
+      "data": {
+        "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Major_medically_causes_ethnic.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [
+        {
+          "filter": "datum['Ethnic Group'] === 'Malay'"
+        }
+      ],
+      "selection": {
+        "CauseSelection": {
+          "type": "multi",  
+          "fields": ["Causes"],  
+          "bind": "legend"  
+        }
+      },
+      "mark": {
+        "type": "arc",
+        "innerRadius": 32
+      },
+      "encoding": {
+        "theta": {
+          "field": "Number of Cases",
+          "type": "quantitative",
+          "stack": true
+        },
+        "color": {
+          "field": "Causes",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "COVID-19 infection",
+              "Cerebrovascular diseases", 
+              "Ischaemic heart diseases",
+              "Malignant neoplasm of trachea, bronchus and lung",
+              "Pneumonia",
+              "Transport accidents"
+            ],
+            "range": [
+              "#717EC3",
+              "#A3B7E0",
+              "#71A8C3",
+              "#D9B4E6",
+              "#B49FCF",
+              "#C38C71"
+            ]
+          },
+        
+          "legend": {
+            "title": "Cause of Death",
+            "titleFontSize": 15,
+            "titleFont": "Serif",
+            "orient": "bottom",
+            "labelLimit": 300,
+            "labelFontSize": 13, 
+            "labelOverlap": true, 
+            "labelFont": "Serif",
+            "columns": 2
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "CauseSelection", "value": 1},
+          "value": 0.3 
+        },
+        "tooltip": [
+          {"field": "Ethnic Group", "type": "nominal", "title": "Ethnic Group"} ,
+          {"field": "Causes", "type": "nominal", "title": "Cause"},
+          {"field": "Number of Cases", "type": "quantitative", "title": "Number of Death Cases"}
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Chinese",
+        "fontSize": 14,
+        "font": "Serif"
+      },
+      "width": 195,
+      "height": 140,
+      "data": {
+        "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Major_medically_causes_ethnic.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [
+        {
+          "filter": "datum['Ethnic Group'] === 'Chinese'"
+        }
+      ],
+      "selection": {
+        "CauseSelection": {
+          "type": "multi",
+          "fields": ["Causes"],
+          "bind": "legend"
+        }
+      },
+      "mark": {
+        "type": "arc",
+        "innerRadius": 32
+      },
+      "encoding": {
+        "theta": {
+          "field": "Number of Cases",
+          "type": "quantitative",
+          "stack": true
+        },
+        "color": {
+          "field": "Causes",
+          "type": "nominal"
+        },
+        "opacity": {
+          "condition": {"selection": "CauseSelection", "value": 1},
+          "value": 0.3
+        },
+        "tooltip": [
+          {"field": "Ethnic Group", "type": "nominal", "title": "Ethnic Group"} ,
+          {"field": "Causes", "type": "nominal", "title": "Cause"},
+          {"field": "Number of Cases", "type": "quantitative", "title": "Number of Death Cases"}
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Indian",
+        "fontSize": 14,
+        "font": "Serif"
+      },
+      "width": 195,
+      "height": 140,
+      "data": {
+        "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Major_medically_causes_ethnic.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [
+        {
+          "filter": "datum['Ethnic Group'] === 'Indians'"
+        }
+      ],
+      "selection": {
+        "CauseSelection": {
+          "type": "multi",
+          "fields": ["Causes"],
+          "bind": "legend"
+        }
+      },
+      "mark": {
+        "type": "arc",
+        "innerRadius": 32
+      },
+      "encoding": {
+        "theta": {
+          "field": "Number of Cases",
+          "type": "quantitative",
+          "stack": true
+        },
+        "color": {
+          "field": "Causes",
+          "type": "nominal"
+        },
+        "opacity": {
+          "condition": {"selection": "CauseSelection", "value": 1},
+          "value": 0.3
+        },
+        "tooltip": [
+          {"field": "Ethnic Group", "type": "nominal", "title": "Ethnic Group"} ,
+          {"field": "Causes", "type": "nominal", "title": "Cause"},
+          {"field": "Number of Cases", "type": "quantitative", "title": "Number of Death Cases"}
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Others",
+        "fontSize": 14,
+        "font": "Serif"
+      },
+      "width": 195,
+      "height": 140,
+      "data": {
+        "url": "https://raw.githubusercontent.com/YuEunice/Data_Visualisation_2/main/data/Major_medically_causes_ethnic.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [
+        {
+          "filter": "datum['Ethnic Group'] === 'Others'"
+        }
+      ],
+      "selection": {
+        "CauseSelection": {
+          "type": "multi",
+          "fields": ["Causes"],
+          "bind": "legend"
+        }
+      },
+      "mark": {
+        "type": "arc",
+        "innerRadius": 32
+      },
+      "encoding": {
+        "theta": {
+          "field": "Number of Cases",
+          "type": "quantitative",
+          "stack": true
+        },
+        "color": {
+          "field": "Causes",
+          "type": "nominal"
+        },
+        "opacity": {
+          "condition": {"selection": "CauseSelection", "value": 1},
+          "value": 0.3
+        },
+        "tooltip": [
+          {"field": "Ethnic Group", "type": "nominal", "title": "Ethnic Group"} ,
+          {"field": "Causes", "type": "nominal", "title": "Cause"},
+          {"field": "Number of Cases", "type": "quantitative", "title": "Number of Death Cases"}
+        ]
+      }
+    }
+  ],
+  "columns": 2
+}
